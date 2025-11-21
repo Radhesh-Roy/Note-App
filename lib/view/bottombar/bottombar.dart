@@ -15,8 +15,6 @@ class _MyHomePageState extends State<MyHomePage> {
   int currentIndex = 0;
   List screens = [Notes(), Folder(), Trash(), Settings()];
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
