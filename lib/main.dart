@@ -13,7 +13,7 @@ class MyNote extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Notes(),
+      home: Splashscreen(),
     );
   }
 }

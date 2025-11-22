@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:mynote/database/notes.dart';
 import 'package:mynote/view/note/widget/NoteCard.dart';
@@ -30,8 +32,14 @@ class _NotesState extends State<Notes> {
               child: ListView.builder(
 
                 itemCount: NotesData.list.length,
-                itemBuilder: (context, i) {
-                  return NoteCard(i: 0);
+                itemBuilder: (context, index) {
+                  return NoteCard(i: index, ontap: () {
+                    NotesData.trashList.add(NotesData.list[index]);
+                    NotesData.list.removeAt(index);
+                    setState(() {
+                      
+                    });
+                  },);
                 },
               ),
             ),

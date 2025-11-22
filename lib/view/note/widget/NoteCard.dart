@@ -6,9 +6,10 @@ import '../../noteview/view page.dart';
 
 class NoteCard extends StatelessWidget {
   const NoteCard({
-    super.key, required this.i,
+    super.key, required this.i, required this.ontap,
   });
   final int i;
+  final VoidCallback ontap;
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +49,19 @@ class NoteCard extends StatelessWidget {
                   padding: EdgeInsetsGeometry.symmetric(
                     horizontal: 10,
                   ),
-                  child: Text("${NotesData.list[i]['details']}")
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("${NotesData.list[i]['details']}"),
+                    ],
+                  )
 
               ),
+              InkWell(
+                onTap: ontap,
+                child: Icon(Icons.delete_forever_sharp, color: Colors.red,),
+              ),
+
 
             ],
           ),

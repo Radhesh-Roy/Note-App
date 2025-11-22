@@ -20,7 +20,9 @@ class _NoteAddScreenState extends State<NoteAddScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text("Add Notes")),
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text("Add Notes")),
       body: Padding(
         padding: const EdgeInsets.all(2.0),
         child: SingleChildScrollView(
