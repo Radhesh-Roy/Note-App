@@ -15,7 +15,7 @@ class NoteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> NoteViewScreen(title: '${NotesData.list[i]['title']}', date: '${NotesData.list[i]['created_at']}', details: '${NotesData.list[i]['details']}',)));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> NoteViewScreen( index: i, id: NotesData.list[i]['id'] ,title: '${NotesData.list[i]['title']}', date: '${NotesData.list[i]['created_at']}', details: '${NotesData.list[i]['details']}',)));
       },
 
       child: Card(
